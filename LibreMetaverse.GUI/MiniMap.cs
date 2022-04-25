@@ -28,9 +28,9 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using OpenMetaverse.Assets;
+using LibreMetaverse.Assets;
 
-namespace OpenMetaverse.GUI
+namespace LibreMetaverse.GUI
 {
     /// <summary>
     /// PictureBox GUI component for displaying a client's mini-map

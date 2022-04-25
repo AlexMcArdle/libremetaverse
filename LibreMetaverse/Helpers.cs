@@ -496,7 +496,7 @@ namespace LibreMetaverse
                 try
                 {
                     System.Reflection.Assembly a = System.Reflection.Assembly.GetExecutingAssembly();
-                    System.IO.Stream s = a.GetManifestResourceStream("OpenMetaverse.Resources." + resourceName);
+                    System.IO.Stream s = a.GetManifestResourceStream("LibreMetaverse.Resources." + resourceName);
                     if (s != null) return s;
                 }
                 catch (Exception ex)

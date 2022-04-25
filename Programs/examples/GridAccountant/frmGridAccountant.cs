@@ -30,8 +30,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Data;
-using OpenMetaverse;
-using OpenMetaverse.Packets;
+using LibreMetaverse;
+using LibreMetaverse.Packets;
 
 namespace GridAccountant
 {

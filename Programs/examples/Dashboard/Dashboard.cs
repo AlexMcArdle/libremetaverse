@@ -1,5 +1,5 @@
-using OpenMetaverse;
-using OpenMetaverse.GUI;
+using LibreMetaverse;
+using LibreMetaverse.GUI;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -16,7 +16,7 @@ namespace Dashboard
         bool ShuttingDown = false;
 
         /// <summary>
-        /// Provides a full representation of OpenMetaverse.GUI
+        /// Provides a full representation of LibreMetaverse.GUI
         /// </summary>
         /// <param name="firstName"></param>
         /// <param name="lastName"></param>

@@ -28,7 +28,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace OpenMetaverse.GUI
+namespace LibreMetaverse.GUI
 {
 
     /// <summary>

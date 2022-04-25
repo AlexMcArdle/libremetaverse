@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using OpenMetaverse;
-using OpenMetaverse.Imaging;
-using OpenMetaverse.Assets;
+using LibreMetaverse;
+using LibreMetaverse.Imaging;
+using LibreMetaverse.Assets;
 
 namespace groupmanager
 {

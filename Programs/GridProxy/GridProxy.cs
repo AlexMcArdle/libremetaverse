@@ -1681,7 +1681,7 @@ namespace GridProxy
                             int end = length - 1;
                             Packet packet = LibreMetaverse.Packets.Packet.BuildPacket(receiveBuffer, ref end, zeroBuffer);
 
-                            //OpenMetaverse.Logger.Log("-> " + packet.Type + " #" + packet.Header.Sequence, Helpers.LogLevel.Debug);
+                            //LibreMetaverse.Logger.Log("-> " + packet.Type + " #" + packet.Header.Sequence, Helpers.LogLevel.Debug);
 
                             // check for ACKs we're waiting for
                             packet = CheckAcks(packet, Direction.Outgoing, ref length, ref needsCopy);

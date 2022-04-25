@@ -3451,7 +3451,7 @@ namespace LibreMetaverse
         /// <summary>
         /// Sets home location to agents current position
         /// </summary>
-        /// <remarks>will fire an AlertMessage (<seealso cref="E:OpenMetaverse.AgentManager.OnAlertMessage"/>) with 
+        /// <remarks>will fire an AlertMessage (<seealso cref="E:LibreMetaverse.AgentManager.OnAlertMessage"/>) with 
         /// success or failure message</remarks>
         public void SetHome()
         {

@@ -29,7 +29,7 @@
  * The Idealist viewer is licensed under the three clause BSD license.
  */
 /*
- * MeshmerizerR class implments OpenMetaverse.Rendering.IRendering interface
+ * MeshmerizerR class implments LibreMetaverse.Rendering.IRendering interface
  * using PrimMesher (http://forge.opensimulator.org/projects/primmesher).
  */
 

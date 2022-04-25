@@ -26,7 +26,7 @@
 
 using System;
 using System.Text;
-using OpenMetaverse;
+using LibreMetaverse;
 
 namespace OpenMetaverse
 {
@@ -44,7 +44,7 @@ namespace OpenMetaverse
     }
 }
     
-namespace OpenMetaverse.Packets
+namespace LibreMetaverse.Packets
 {
     /// <summary>
     /// Thrown when a packet could not be successfully deserialized

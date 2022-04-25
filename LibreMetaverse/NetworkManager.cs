@@ -39,7 +39,7 @@ namespace LibreMetaverse
 {
     /// <summary>
     /// NetworkManager is responsible for managing the network layer of 
-    /// OpenMetaverse. It tracks all the server connections, serializes 
+    /// LibreMetaverse. It tracks all the server connections, serializes 
     /// outgoing traffic and deserializes incoming traffic, and provides
     /// instances of delegates for network-related events.
     /// </summary>

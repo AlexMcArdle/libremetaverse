@@ -42,7 +42,7 @@ namespace LibreMetaverse
     /// using System;
     /// using System.Collections.Generic;
     /// using System.Text;
-    /// using OpenMetaverse;
+    /// using LibreMetaverse;
     /// 
     /// namespace FirstBot
     /// {

@@ -2,7 +2,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
-using OpenMetaverse.Imaging;
+using LibreMetaverse.Imaging;
 
 namespace Baker
 {
@@ -23,7 +23,7 @@ namespace Baker
 
         private void DisplayResource(string resource)
         {
-            Stream stream = OpenMetaverse.Helpers.GetResourceStream(resource + ".tga");
+            Stream stream = LibreMetaverse.Helpers.GetResourceStream(resource + ".tga");
 
             if (stream != null)
             {

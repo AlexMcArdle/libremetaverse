@@ -29,7 +29,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace OpenMetaverse.GUI
+namespace LibreMetaverse.GUI
 {
     /// <summary>
     /// RichTextBox GUI component for displaying a client's status output

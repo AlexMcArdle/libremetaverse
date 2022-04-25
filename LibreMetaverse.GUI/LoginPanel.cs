@@ -30,7 +30,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace OpenMetaverse.GUI
+namespace LibreMetaverse.GUI
 {
     public class LoginPanel : Panel
     {

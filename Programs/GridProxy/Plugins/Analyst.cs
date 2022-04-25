@@ -336,7 +336,7 @@ public class Analyst : ProxyPlugin
                         }
 
                         name = lineName;
-                        packetClass = openmvAssembly.GetType("OpenMetaverse.Packets." + name + "Packet");
+                        packetClass = openmvAssembly.GetType("LibreMetaverse.Packets." + name + "Packet");
                         if (packetClass == null) throw new Exception("Couldn't get class " + name + "Packet");
                         ConstructorInfo ctr = packetClass.GetConstructor(new Type[] { });
                         if (ctr == null) throw new Exception("Couldn't get suitable constructor for " + name + "Packet");
@@ -487,7 +487,7 @@ public class Analyst : ProxyPlugin
     // MagicCast: given a packet/block/field name and a string, convert the string to a value of the appropriate type
     private object MagicCast(string name, string block, string field, string value)
     {
-        Type packetClass = openmvAssembly.GetType("OpenMetaverse.Packets." + name + "Packet");
+        Type packetClass = openmvAssembly.GetType("LibreMetaverse.Packets." + name + "Packet");
         if (packetClass == null) throw new Exception("Couldn't get class " + name + "Packet");
 
         FieldInfo blockField = packetClass.GetField(block);

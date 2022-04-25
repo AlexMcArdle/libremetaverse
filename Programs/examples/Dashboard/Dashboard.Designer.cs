@@ -30,21 +30,21 @@ namespace Dashboard
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.localChat1 = new OpenMetaverse.GUI.LocalChat();
-            this.statusOutput1 = new OpenMetaverse.GUI.StatusOutput();
+            this.localChat1 = new LibreMetaverse.GUI.LocalChat();
+            this.statusOutput1 = new LibreMetaverse.GUI.StatusOutput();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.avatarList1 = new OpenMetaverse.GUI.AvatarList();
+            this.avatarList1 = new LibreMetaverse.GUI.AvatarList();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.friendsList1 = new OpenMetaverse.GUI.FriendList();
+            this.friendsList1 = new LibreMetaverse.GUI.FriendList();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.groupList1 = new OpenMetaverse.GUI.GroupList();
+            this.groupList1 = new LibreMetaverse.GUI.GroupList();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.inventoryTree1 = new OpenMetaverse.GUI.InventoryTree();
-            this.miniMap1 = new OpenMetaverse.GUI.MiniMap();
-            this.messageBar1 = new OpenMetaverse.GUI.MessageBar();
-            this.loginPanel1 = new OpenMetaverse.GUI.LoginPanel();
+            this.inventoryTree1 = new LibreMetaverse.GUI.InventoryTree();
+            this.miniMap1 = new LibreMetaverse.GUI.MiniMap();
+            this.messageBar1 = new LibreMetaverse.GUI.MessageBar();
+            this.loginPanel1 = new LibreMetaverse.GUI.LoginPanel();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -302,21 +302,21 @@ namespace Dashboard
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private OpenMetaverse.GUI.MiniMap miniMap1;
+        private LibreMetaverse.GUI.MiniMap miniMap1;
         private System.Windows.Forms.SplitContainer splitContainer3;
-        private OpenMetaverse.GUI.LocalChat localChat1;
-        private OpenMetaverse.GUI.StatusOutput statusOutput1;
-        private OpenMetaverse.GUI.LoginPanel loginPanel1;
-        private OpenMetaverse.GUI.MessageBar messageBar1;
+        private LibreMetaverse.GUI.LocalChat localChat1;
+        private LibreMetaverse.GUI.StatusOutput statusOutput1;
+        private LibreMetaverse.GUI.LoginPanel loginPanel1;
+        private LibreMetaverse.GUI.MessageBar messageBar1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private OpenMetaverse.GUI.AvatarList avatarList1;
+        private LibreMetaverse.GUI.AvatarList avatarList1;
         private System.Windows.Forms.TabPage tabPage2;
-        private OpenMetaverse.GUI.FriendList friendsList1;
+        private LibreMetaverse.GUI.FriendList friendsList1;
         private System.Windows.Forms.TabPage tabPage3;
-        private OpenMetaverse.GUI.GroupList groupList1;
+        private LibreMetaverse.GUI.GroupList groupList1;
         private System.Windows.Forms.TabPage tabPage4;
-        private OpenMetaverse.GUI.InventoryTree inventoryTree1;
+        private LibreMetaverse.GUI.InventoryTree inventoryTree1;
 
     }
 }

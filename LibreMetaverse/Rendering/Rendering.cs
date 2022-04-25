@@ -455,7 +455,7 @@ namespace LibreMetaverse.Rendering
         public static List<string> ListRenderers(string path)
         {
             List<string> plugins = new List<string>();
-            string[] files = Directory.GetFiles(path, "OpenMetaverse.Rendering.*.dll");
+            string[] files = Directory.GetFiles(path, "LibreMetaverse.Rendering.*.dll");
 
             foreach (string f in files)
             {
