@@ -98,7 +98,7 @@ namespace LibreMetaverse
         }
 
         /// <summary>
-        /// Initializes a new instance of the <seealso cref="T:OpenMetaverse.InternalDictionary"/> Class
+        /// Initializes a new instance of the <seealso cref="T:LibreMetaverse.InternalDictionary"/> Class
         /// with the specified key/value, With its initial capacity specified.
         /// </summary>
         /// <param name="capacity">Initial size of dictionary</param>
@@ -115,7 +115,7 @@ namespace LibreMetaverse
         }
 
         /// <summary>
-        /// Try to get entry from <seealso cref="T:OpenMetaverse.InternalDictionary"/> with specified key
+        /// Try to get entry from <seealso cref="T:LibreMetaverse.InternalDictionary"/> with specified key
         /// </summary>
         /// <param name="key">Key to use for lookup</param>
         /// <param name="value">Value returned</param>
@@ -220,7 +220,7 @@ namespace LibreMetaverse
             return found;
         }
 
-        /// <summary>Perform an <seealso cref="T:System.Action"/> on each entry in an <seealso cref="T:OpenMetaverse.InternalDictionary"/></summary>
+        /// <summary>Perform an <seealso cref="T:System.Action"/> on each entry in an <seealso cref="T:LibreMetaverse.InternalDictionary"/></summary>
         /// <param name="action"><seealso cref="T:System.Action"/> to perform</param>
         /// <example>
         /// <code>
@@ -247,7 +247,7 @@ namespace LibreMetaverse
             }
         }
 
-        /// <summary>Perform an <seealso cref="T:System.Action"/> on each key of an <seealso cref="T:OpenMetaverse.InternalDictionary"/></summary>
+        /// <summary>Perform an <seealso cref="T:System.Action"/> on each key of an <seealso cref="T:LibreMetaverse.InternalDictionary"/></summary>
         /// <param name="action"><seealso cref="T:System.Action"/> to perform</param>
         public void ForEach(Action<TKey> action)
         {
@@ -261,7 +261,7 @@ namespace LibreMetaverse
         }
 
         /// <summary>
-        /// Perform an <seealso cref="T:System.Action"/> on each KeyValuePair of an <seealso cref="T:OpenMetaverse.InternalDictionary"/>
+        /// Perform an <seealso cref="T:System.Action"/> on each KeyValuePair of an <seealso cref="T:LibreMetaverse.InternalDictionary"/>
         /// </summary>
         /// <param name="action"><seealso cref="T:System.Action"/> to perform</param>
         public void ForEach(Action<KeyValuePair<TKey, TValue>> action)

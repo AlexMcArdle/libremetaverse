@@ -149,7 +149,7 @@ namespace LibreMetaverse
         }
 
         /// <summary>
-        /// Initializes a new instance of the <seealso cref="T:OpenMetaverse.ObservableDictionary"/> Class
+        /// Initializes a new instance of the <seealso cref="T:LibreMetaverse.ObservableDictionary"/> Class
         /// with the specified key/value, With its initial capacity specified.
         /// </summary>
         /// <param name="capacity">Initial size of dictionary</param>

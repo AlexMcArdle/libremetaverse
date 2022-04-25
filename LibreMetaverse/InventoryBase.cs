@@ -173,8 +173,8 @@ namespace LibreMetaverse
         /// <summary>
         /// Construct a new InventoryItem object of a specific Type
         /// </summary>
-        /// <param name="type">The type of item from <seealso cref="T:OpenMetaverse.InventoryType" /></param>
-        /// <param name="itemID"><seealso cref="T:OpenMetaverse.UUID" /> of the item</param>
+        /// <param name="type">The type of item from <seealso cref="T:LibreMetaverse.InventoryType" /></param>
+        /// <param name="itemID"><seealso cref="T:LibreMetaverse.UUID" /> of the item</param>
         public InventoryItem(InventoryType type, UUID itemID) : base(itemID) { InventoryType = type; }
 
         /// <summary>
@@ -259,9 +259,9 @@ namespace LibreMetaverse
 
         /// <inheritdoc />
         /// <summary>
-        /// Determine whether the specified <seealso cref="T:OpenMetaverse.InventoryBase" /> object is equal to the current object
+        /// Determine whether the specified <seealso cref="T:LibreMetaverse.InventoryBase" /> object is equal to the current object
         /// </summary>
-        /// <param name="o">The <seealso cref="T:OpenMetaverse.InventoryBase" /> object to compare against</param>
+        /// <param name="o">The <seealso cref="T:LibreMetaverse.InventoryBase" /> object to compare against</param>
         /// <returns>true if objects are the same</returns>
         public override bool Equals(InventoryBase o)
         {
@@ -371,7 +371,7 @@ namespace LibreMetaverse
     /// <summary>
     /// InventoryTexture Class representing a graphical image
     /// </summary>
-    /// <seealso cref="T:OpenMetaverse.Imaging.ManagedImage" />
+    /// <seealso cref="T:LibreMetaverse.Imaging.ManagedImage" />
     [Serializable]
     public class InventoryTexture : InventoryItem
     {
@@ -636,8 +636,8 @@ namespace LibreMetaverse
         /// <summary>
         /// Construct an InventorySnapshot object
         /// </summary>
-        /// <param name="itemID">A <seealso cref="T:OpenMetaverse.UUID" /> which becomes the 
-        /// <seealso cref="T:OpenMetaverse.InventoryItem" /> objects AssetUUID</param>
+        /// <param name="itemID">A <seealso cref="T:LibreMetaverse.UUID" /> which becomes the 
+        /// <seealso cref="T:LibreMetaverse.InventoryItem" /> objects AssetUUID</param>
         public InventorySnapshot(UUID itemID)
             : base(itemID)
         {
@@ -781,13 +781,13 @@ namespace LibreMetaverse
 
     /// <inheritdoc />
     /// <summary>
-    /// A folder contains <seealso cref="T:OpenMetaverse.InventoryItem" />s and has certain attributes specific 
+    /// A folder contains <seealso cref="T:LibreMetaverse.InventoryItem" />s and has certain attributes specific 
     /// to itself
     /// </summary>
     [Serializable]
     public class InventoryFolder : InventoryBase
     {
-        /// <summary>The Preferred <seealso cref="T:OpenMetaverse.FolderType"/> for a folder.</summary>
+        /// <summary>The Preferred <seealso cref="T:LibreMetaverse.FolderType"/> for a folder.</summary>
         public FolderType PreferredType;
         /// <summary>The Version of this folder</summary>
         public int Version;

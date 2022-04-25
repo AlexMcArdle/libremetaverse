@@ -1284,7 +1284,7 @@ namespace LibreMetaverse
         public uint LocalID => localID;
 
         /// <summary>Where the avatar started at login. Can be "last", "home" 
-        /// or a login <seealso cref="T:OpenMetaverse.URI"/></summary>
+        /// or a login <seealso cref="T:LibreMetaverse.URI"/></summary>
         public string StartLocation { get; private set; } = string.Empty;
 
         /// <summary>The access level of this agent, usually M, PG or A</summary>
@@ -1481,7 +1481,7 @@ namespace LibreMetaverse
         /// <summary>
         /// Constructor, setup callbacks for packets related to our avatar
         /// </summary>
-        /// <param name="client">A reference to the <seealso cref="T:OpenMetaverse.GridClient"/> Class</param>
+        /// <param name="client">A reference to the <seealso cref="T:LibreMetaverse.GridClient"/> Class</param>
         public AgentManager(GridClient client)
         {
             Client = client;
@@ -3268,7 +3268,7 @@ namespace LibreMetaverse
         /// <summary>
         /// Update agent's profile interests
         /// </summary>
-        /// <param name="interests">selection of interests from <seealso cref="T:OpenMetaverse.Avatar.Interests"/> struct</param>
+        /// <param name="interests">selection of interests from <seealso cref="T:LibreMetaverse.Avatar.Interests"/> struct</param>
         public void UpdateInterests(Avatar.Interests interests)
         {
             AvatarInterestsUpdatePacket aiup = new AvatarInterestsUpdatePacket
@@ -3477,7 +3477,7 @@ namespace LibreMetaverse
         /// Move an agent in to a simulator. This packet is the last packet
         /// needed to complete the transition in to a new simulator
         /// </summary>
-        /// <param name="simulator"><seealso cref="T:OpenMetaverse.Simulator"/> Object</param>
+        /// <param name="simulator"><seealso cref="T:LibreMetaverse.Simulator"/> Object</param>
         public void CompleteAgentMovement(Simulator simulator)
         {
             CompleteAgentMovementPacket move = new CompleteAgentMovementPacket
@@ -3497,7 +3497,7 @@ namespace LibreMetaverse
         /// <summary>
         /// Reply to script permissions request
         /// </summary>
-        /// <param name="simulator"><seealso cref="T:OpenMetaverse.Simulator"/> Object</param>
+        /// <param name="simulator"><seealso cref="T:LibreMetaverse.Simulator"/> Object</param>
         /// <param name="itemID"><seealso cref="UUID"/> of the itemID requesting permissions</param>
         /// <param name="taskID"><seealso cref="UUID"/> of the taskID requesting permissions</param>
         /// <param name="permissions"><seealso cref="LibreMetaverse.ScriptPermission"/> list of permissions to allow</param>
