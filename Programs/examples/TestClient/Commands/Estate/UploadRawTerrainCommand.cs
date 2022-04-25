@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class UploadRawTerrainCommand : Command
     {

@@ -31,14 +31,14 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Http;
-using OpenMetaverse.Assets;
-using OpenMetaverse.Packets;
-using OpenMetaverse.Interfaces;
-using OpenMetaverse.Messages.Linden;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Http;
+using LibreMetaverse.Assets;
+using LibreMetaverse.Packets;
+using LibreMetaverse.Interfaces;
+using LibreMetaverse.Messages.Linden;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     #region Enums
 
@@ -3239,7 +3239,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Update agent profile
         /// </summary>
-        /// <param name="profile"><seealso cref="OpenMetaverse.Avatar.AvatarProperties"/> struct containing updated 
+        /// <param name="profile"><seealso cref="LibreMetaverse.Avatar.AvatarProperties"/> struct containing updated 
         /// profile information</param>
         public void UpdateProfile(Avatar.AvatarProperties profile)
         {
@@ -3500,7 +3500,7 @@ namespace OpenMetaverse
         /// <param name="simulator"><seealso cref="T:OpenMetaverse.Simulator"/> Object</param>
         /// <param name="itemID"><seealso cref="UUID"/> of the itemID requesting permissions</param>
         /// <param name="taskID"><seealso cref="UUID"/> of the taskID requesting permissions</param>
-        /// <param name="permissions"><seealso cref="OpenMetaverse.ScriptPermission"/> list of permissions to allow</param>
+        /// <param name="permissions"><seealso cref="LibreMetaverse.ScriptPermission"/> list of permissions to allow</param>
         public void ScriptQuestionReply(Simulator simulator, UUID itemID, UUID taskID, ScriptPermission permissions)
         {
             ScriptAnswerYesPacket yes = new ScriptAnswerYesPacket

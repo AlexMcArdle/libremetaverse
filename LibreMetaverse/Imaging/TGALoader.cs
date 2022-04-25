@@ -28,7 +28,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace OpenMetaverse.Imaging
+namespace LibreMetaverse.Imaging
 {
 #if !NO_UNSAFE
 

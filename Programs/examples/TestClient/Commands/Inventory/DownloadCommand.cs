@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
-using OpenMetaverse.Assets;
+using LibreMetaverse.Assets;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class DownloadCommand : Command
     {

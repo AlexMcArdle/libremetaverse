@@ -30,10 +30,10 @@ using System.Text;
 using System.IO;
 using System.IO.Compression;
 using System.Reflection;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.StructuredData;
 using ComponentAce.Compression.Libs.zlib;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// Static helper functions and global variables
@@ -515,7 +515,7 @@ namespace OpenMetaverse
         /// <returns>An object that can be serialized with LLSD</returns>
         public static StructuredData.OSD PrimListToOSD(List<Primitive> prims)
         {
-            StructuredData.OSDMap map = new OpenMetaverse.StructuredData.OSDMap(prims.Count);
+            StructuredData.OSDMap map = new LibreMetaverse.StructuredData.OSDMap(prims.Count);
 
             foreach (Primitive prim in prims)
                 map.Add(prim.LocalID.ToString(), prim.GetOSD());

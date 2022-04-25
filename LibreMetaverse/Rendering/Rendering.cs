@@ -29,12 +29,12 @@ using System.IO;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using OpenMetaverse.Assets;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.Assets;
+using LibreMetaverse.StructuredData;
 
 // The common elements shared between rendering plugins are defined here
 
-namespace OpenMetaverse.Rendering
+namespace LibreMetaverse.Rendering
 {
     #region Enums
 

@@ -31,7 +31,7 @@ using System.IO;
 using System.Threading;
 using System.Security.Cryptography.X509Certificates;
 
-namespace OpenMetaverse.Http
+namespace LibreMetaverse.Http
 {
     public static class CapsBase
     {

@@ -27,11 +27,11 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Http;
-using OpenMetaverse.Packets;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Http;
+using LibreMetaverse.Packets;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     #region Enums
 

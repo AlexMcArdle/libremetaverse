@@ -27,9 +27,9 @@
 using System;
 using System.Collections;
 using System.Reflection;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.StructuredData;
 
-namespace OpenMetaverse.Packets
+namespace LibreMetaverse.Packets
 {
     public abstract partial class Packet
     {

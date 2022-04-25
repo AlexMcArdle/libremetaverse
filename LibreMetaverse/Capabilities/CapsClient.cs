@@ -29,9 +29,9 @@ using System;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.StructuredData;
 
-namespace OpenMetaverse.Http
+namespace LibreMetaverse.Http
 {
     public class CapsClient
     {

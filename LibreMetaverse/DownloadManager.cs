@@ -28,9 +28,9 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
-using OpenMetaverse.Http;
+using LibreMetaverse.Http;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// Represents individual HTTP Download request

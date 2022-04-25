@@ -27,13 +27,13 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using OpenMetaverse.Packets;
-using OpenMetaverse.Http;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Interfaces;
-using OpenMetaverse.Messages.Linden;
+using LibreMetaverse.Packets;
+using LibreMetaverse.Http;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Interfaces;
+using LibreMetaverse.Messages.Linden;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     #region Enums
 
@@ -927,7 +927,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Create (rez) a new prim object in a simulator
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object to place the object in</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object to place the object in</param>
         /// <param name="prim">Data describing the prim object to rez</param>
         /// <param name="groupID">Group ID that this prim will be set to, or UUID.Zero if you
         /// do not want the object to be associated with a specific group</param>
@@ -1012,7 +1012,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Rez a Linden tree
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="scale">The size of the tree</param>
         /// <param name="rotation">The rotation of the tree</param>
         /// <param name="position">The position of the tree</param>
@@ -1045,7 +1045,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Rez grass and ground cover
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="scale">The size of the grass</param>
         /// <param name="rotation">The rotation of the grass</param>
         /// <param name="position">The position of the grass</param>
@@ -1077,7 +1077,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the textures to apply to the faces of an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="textures">The texture data to apply</param>
         public void SetTextures(Simulator simulator, uint localID, Primitive.TextureEntry textures)
@@ -1088,7 +1088,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the textures to apply to the faces of an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="textures">The texture data to apply</param>
         /// <param name="mediaUrl">A media URL (not used)</param>
@@ -1110,7 +1110,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the Light data on an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="light">A <seealso cref="Primitive.LightData"/> object containing the data to set</param>
         public void SetLight(Simulator simulator, uint localID, Primitive.LightData light)
@@ -1141,7 +1141,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the flexible data on an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="flexible">A <seealso cref="Primitive.FlexibleData"/> object containing the data to set</param>
         public void SetFlexible(Simulator simulator, uint localID, Primitive.FlexibleData flexible)
@@ -1164,7 +1164,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the sculptie texture and data on an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="sculpt">A <seealso cref="Primitive.SculptData"/> object containing the data to set</param>
         public void SetSculpt(Simulator simulator, uint localID, Primitive.SculptData sculpt)
@@ -1190,8 +1190,8 @@ namespace OpenMetaverse
             shape.AgentData.AgentID = Client.Self.AgentID;
             shape.AgentData.SessionID = Client.Self.SessionID;
 
-            shape.ObjectData = new OpenMetaverse.Packets.ObjectShapePacket.ObjectDataBlock[1];
-            shape.ObjectData[0] = new OpenMetaverse.Packets.ObjectShapePacket.ObjectDataBlock();
+            shape.ObjectData = new LibreMetaverse.Packets.ObjectShapePacket.ObjectDataBlock[1];
+            shape.ObjectData[0] = new LibreMetaverse.Packets.ObjectShapePacket.ObjectDataBlock();
             shape.ObjectData[0].ObjectLocalID = localID;
             shape.ObjectData[0].PathScaleX = 100;
             shape.ObjectData[0].PathScaleY = 150;
@@ -1203,7 +1203,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Unset additional primitive parameters on an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="type">The extra parameters to set</param>
         public void SetExtraParamOff(Simulator simulator, uint localID, ExtraParamType type)
@@ -1226,7 +1226,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Link multiple prims into a linkset
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the objects reside</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the objects reside</param>
         /// <param name="localIDs">An array which contains the IDs of the objects to link</param>
         /// <remarks>The last object in the array will be the root object of the linkset TODO: Is this true?</remarks>
         public void LinkPrims(Simulator simulator, List<uint> localIDs)
@@ -1250,7 +1250,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Delink/Unlink multiple prims from a linkset
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the objects reside</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the objects reside</param>
         /// <param name="localIDs">An array which contains the IDs of the objects to delink</param>
         public void DelinkPrims(Simulator simulator, List<uint> localIDs)
         {
@@ -1276,7 +1276,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Change the rotation of an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="rotation">The new rotation of the object</param>
         public void SetRotation(Simulator simulator, uint localID, Quaternion rotation)
@@ -1296,7 +1296,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the name of an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="name">A string containing the new name of the object</param>
         public void SetName(Simulator simulator, uint localID, string name)
@@ -1307,7 +1307,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the name of multiple objects
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the objects reside</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the objects reside</param>
         /// <param name="localIDs">An array which contains the IDs of the objects to change the name of</param>
         /// <param name="names">An array which contains the new names of the objects</param>
         public void SetNames(Simulator simulator, uint[] localIDs, string[] names)
@@ -1331,7 +1331,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the description of an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="description">A string containing the new description of the object</param>
         public void SetDescription(Simulator simulator, uint localID, string description)
@@ -1342,7 +1342,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the descriptions of multiple objects
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the objects reside</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the objects reside</param>
         /// <param name="localIDs">An array which contains the IDs of the objects to change the description of</param>
         /// <param name="descriptions">An array which contains the new descriptions of the objects</param>
         public void SetDescriptions(Simulator simulator, uint[] localIDs, string[] descriptions)
@@ -1366,7 +1366,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Attach an object to this avatar
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="attachPoint">The point on the avatar the object will be attached</param>
         /// <param name="rotation">The rotation of the attached object</param>
@@ -1388,7 +1388,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Drop an attached object from this avatar
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/>
         /// object where the objects reside. This will always be the simulator the avatar is currently in
         /// </param>
         /// <param name="localID">The object's ID which is local to the simulator the object is in</param>
@@ -1407,7 +1407,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Detach an object from yourself
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> 
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> 
         /// object where the objects reside
         /// 
         /// This will always be the simulator the avatar is currently in
@@ -1432,7 +1432,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Change the position of an object, Will change position of entire linkset
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="position">The new position of the object</param>
         public void SetPosition(Simulator simulator, uint localID, Vector3 position)
@@ -1443,7 +1443,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Change the position of an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="position">The new position of the object</param>
         /// <param name="childOnly">if true, will change position of (this) child prim only, not entire linkset</param>
@@ -1460,7 +1460,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Change the Scale (size) of an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="scale">The new scale of the object</param>
         /// <param name="childOnly">If true, will change scale of this prim only, not entire linkset</param>
@@ -1481,7 +1481,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Change the Rotation of an object that is either a child or a whole linkset
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="quat">The new scale of the object</param>
         /// <param name="childOnly">If true, will change rotation of this prim only, not entire linkset</param>
@@ -1509,7 +1509,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Send a Multiple Object Update packet to change the size, scale or rotation of a primitive
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="data">The new rotation, size, or position of the target object</param>
         /// <param name="type">The flags from the <seealso cref="UpdateType"/> Enum</param>
@@ -1533,7 +1533,7 @@ namespace OpenMetaverse
         /// Deed an object (prim) to a group, Object must be shared with group which
         /// can be accomplished with SetPermissions()
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="groupOwner">The <seealso cref="UUID"/> of the group to deed the object to</param>
         public void DeedObject(Simulator simulator, uint localID, UUID groupOwner)
@@ -1559,7 +1559,7 @@ namespace OpenMetaverse
         /// Deed multiple objects (prims) to a group, Objects must be shared with group which
         /// can be accomplished with SetPermissions()
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localIDs">An array which contains the IDs of the objects to deed</param>
         /// <param name="groupOwner">The <seealso cref="UUID"/> of the group to deed the object to</param>
         public void DeedObjects(Simulator simulator, List<uint> localIDs, UUID groupOwner)
@@ -1586,7 +1586,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the permissions on multiple objects
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the objects reside</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the objects reside</param>
         /// <param name="localIDs">An array which contains the IDs of the objects to set the permissions on</param>
         /// <param name="who">The new Who mask to set</param>
         /// <param name="permissions">Which permission to modify</param>
@@ -1620,7 +1620,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Request additional properties for an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="objectID"></param>
         public void RequestObjectPropertiesFamily(Simulator simulator, UUID objectID)
         {
@@ -1630,7 +1630,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Request additional properties for an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="objectID">Absolute UUID of the object</param>
         /// <param name="reliable">Whether to require server acknowledgement of this request</param>
         public void RequestObjectPropertiesFamily(Simulator simulator, UUID objectID, bool reliable)
@@ -1651,7 +1651,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the ownership of a list of objects to the specified group
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the objects reside</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the objects reside</param>
         /// <param name="localIds">An array which contains the IDs of the objects to set the group id on</param>
         /// <param name="groupID">The Groups ID</param>
         public void SetObjectsGroup(Simulator simulator, List<uint> localIds, UUID groupID)
@@ -3065,7 +3065,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the Shape data of an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="prim">Data describing the prim shape</param>
         public void SetShape(Simulator simulator, uint localID, Primitive.ConstructionData prim)
@@ -3075,8 +3075,8 @@ namespace OpenMetaverse
             shape.AgentData.AgentID = Client.Self.AgentID;
             shape.AgentData.SessionID = Client.Self.SessionID;
 
-            shape.ObjectData = new OpenMetaverse.Packets.ObjectShapePacket.ObjectDataBlock[1];
-            shape.ObjectData[0] = new OpenMetaverse.Packets.ObjectShapePacket.ObjectDataBlock();
+            shape.ObjectData = new LibreMetaverse.Packets.ObjectShapePacket.ObjectDataBlock[1];
+            shape.ObjectData[0] = new LibreMetaverse.Packets.ObjectShapePacket.ObjectDataBlock();
 
             shape.ObjectData[0].ObjectLocalID = localID;
 
@@ -3106,7 +3106,7 @@ namespace OpenMetaverse
         /// <summary>
         /// Set the Material data of an object
         /// </summary>
-        /// <param name="simulator">A reference to the <seealso cref="OpenMetaverse.Simulator"/> object where the object resides</param>
+        /// <param name="simulator">A reference to the <seealso cref="LibreMetaverse.Simulator"/> object where the object resides</param>
         /// <param name="localID">The objects ID which is local to the simulator the object is in</param>
         /// <param name="material">The new material of the object</param>
         public void SetMaterial(Simulator simulator, uint localID, Material material)

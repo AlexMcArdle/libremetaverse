@@ -27,7 +27,7 @@
 using System;
 using System.Threading;
 
-namespace OpenMetaverse.Utilities
+namespace LibreMetaverse.Utilities
 {
     /// <summary>
     /// 

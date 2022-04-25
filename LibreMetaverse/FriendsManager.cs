@@ -25,11 +25,11 @@
 
 using System;
 using System.Collections.Generic;
-using OpenMetaverse.Http;
-using OpenMetaverse.Packets;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.Http;
+using LibreMetaverse.Packets;
+using LibreMetaverse.StructuredData;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// 

@@ -1,6 +1,6 @@
 using System;
 
-namespace OpenMetaverse.TestClient.Commands.Movement
+namespace LibreMetaverse.TestClient.Commands.Movement
 {
     class BackCommand : Command
     {

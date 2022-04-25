@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace OpenMetaverse.TestClient.Commands
+namespace LibreMetaverse.TestClient.Commands
 {
     class SearchEventsCommand : Command
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Threading;
 using System.IO;
 using System.Linq;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.StructuredData;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class ImportCommand : Command
     {

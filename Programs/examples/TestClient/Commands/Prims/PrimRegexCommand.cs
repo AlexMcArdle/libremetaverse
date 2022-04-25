@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class PrimRegexCommand : Command
     {

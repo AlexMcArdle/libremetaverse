@@ -37,10 +37,10 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.StructuredData;
 using LibreMetaverse.PrimMesher;
 
-namespace OpenMetaverse.Rendering
+namespace LibreMetaverse.Rendering
 {
     /// <summary>
     /// Meshing code based on the Idealist Viewer (20081213).
@@ -322,7 +322,7 @@ namespace OpenMetaverse.Rendering
 
         /// <summary>
         /// Apply texture coordinate modifications from a
-        /// <seealso cref="OpenMetaverse.Primative.TextureEntryFace"/> to a list of vertices
+        /// <seealso cref="LibreMetaverse.Primative.TextureEntryFace"/> to a list of vertices
         /// </summary>
         /// <param name="vertices">Vertex list to modify texture coordinates for</param>
         /// <param name="center">Center-point of the face</param>

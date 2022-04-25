@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class WearCommand : Command
     {

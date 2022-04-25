@@ -27,7 +27,7 @@
 using System.Drawing;
 using System.Collections.Generic;
 
-namespace OpenMetaverse.Rendering
+namespace LibreMetaverse.Rendering
 {
     [RendererName("Simple Cube Renderer")]
     public class SimpleRenderer : IRendering

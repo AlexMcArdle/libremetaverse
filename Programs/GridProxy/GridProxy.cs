@@ -40,10 +40,10 @@ using System.Net.Sockets;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text.RegularExpressions;
-using OpenMetaverse;
-using OpenMetaverse.Http;
-using OpenMetaverse.Packets;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse;
+using LibreMetaverse.Http;
+using LibreMetaverse.Packets;
+using LibreMetaverse.StructuredData;
 using XmlRpcCore;
 
 namespace GridProxy
@@ -235,7 +235,7 @@ namespace GridProxy
                     ? IPAddress.Loopback : endPoint.Address;
                 loginURI = "http://" + displayAddress + ":" + endPoint.Port + "/";
 
-                OpenMetaverse.Logger.Log("Proxy ready at " + loginURI, Helpers.LogLevel.Info);
+                LibreMetaverse.Logger.Log("Proxy ready at " + loginURI, Helpers.LogLevel.Info);
             }
         }
 
@@ -252,7 +252,7 @@ namespace GridProxy
         public void KeepAlive()
         {
 
-            OpenMetaverse.Logger.Log(">T> KeepAlive", Helpers.LogLevel.Debug);
+            LibreMetaverse.Logger.Log(">T> KeepAlive", Helpers.LogLevel.Debug);
 
             lock (keepAliveLock) { };
 
@@ -264,7 +264,7 @@ namespace GridProxy
 
             loginServer.Close();
 
-            OpenMetaverse.Logger.Log("<T< KeepAlive", Helpers.LogLevel.Debug);
+            LibreMetaverse.Logger.Log("<T< KeepAlive", Helpers.LogLevel.Debug);
         }
 
         // AddDelegate: add callback packetDelegate for packets of type packetName going direction
@@ -309,7 +309,7 @@ namespace GridProxy
             foreach (PacketDelegate del in delegates[origType])
             {
                 try { packet = del(packet, remoteEndPoint); }
-                catch (Exception ex) { OpenMetaverse.Logger.Log("Error in packet delegate", Helpers.LogLevel.Warning, ex); }
+                catch (Exception ex) { LibreMetaverse.Logger.Log("Error in packet delegate", Helpers.LogLevel.Warning, ex); }
 
                 // FIXME: how should we handle the packet type changing?
                 if (packet == null || packet.Type != origType) break;
@@ -352,18 +352,18 @@ namespace GridProxy
             }
             catch (SocketException e)
             {
-                OpenMetaverse.Logger.Log("Socket Exception", Helpers.LogLevel.Error, e);
+                LibreMetaverse.Logger.Log("Socket Exception", Helpers.LogLevel.Error, e);
             }
             catch (ObjectDisposedException e)
             {
-                OpenMetaverse.Logger.Log("Socket Object is disposed Exception", Helpers.LogLevel.Error, e);
+                LibreMetaverse.Logger.Log("Socket Object is disposed Exception", Helpers.LogLevel.Error, e);
             }
         }
 
         // RunLoginProxy: process login requests from clients
         private void RunLoginProxy()
         {
-            OpenMetaverse.Logger.Log(">T> RunLoginProxy", Helpers.LogLevel.Debug);
+            LibreMetaverse.Logger.Log(">T> RunLoginProxy", Helpers.LogLevel.Debug);
 
             try
             {
@@ -375,9 +375,9 @@ namespace GridProxy
 
                         Thread connThread = new Thread((ThreadStart)delegate
                         {
-                            OpenMetaverse.Logger.Log(">T> LoginProxy", Helpers.LogLevel.Debug);
+                            LibreMetaverse.Logger.Log(">T> LoginProxy", Helpers.LogLevel.Debug);
                             ProxyHTTP(client);
-                            OpenMetaverse.Logger.Log("<T< LoginProxy", Helpers.LogLevel.Debug);
+                            LibreMetaverse.Logger.Log("<T< LoginProxy", Helpers.LogLevel.Debug);
                         });
 
                         connThread.IsBackground = true;
@@ -390,7 +390,7 @@ namespace GridProxy
                         if (e.SocketErrorCode == SocketError.Interrupted)
                             break;
 
-                        OpenMetaverse.Logger.Log("Login Failed", Helpers.LogLevel.Error, e);
+                        LibreMetaverse.Logger.Log("Login Failed", Helpers.LogLevel.Error, e);
                         break;
                     }
                     catch (ObjectDisposedException)
@@ -412,10 +412,10 @@ namespace GridProxy
             }
             catch (Exception e)
             {
-                OpenMetaverse.Logger.Log("Exception in RunLoginProxy", Helpers.LogLevel.Error, e);
+                LibreMetaverse.Logger.Log("Exception in RunLoginProxy", Helpers.LogLevel.Error, e);
             }
 
-            OpenMetaverse.Logger.Log("<T< RunLoginProxy", Helpers.LogLevel.Debug);
+            LibreMetaverse.Logger.Log("<T< RunLoginProxy", Helpers.LogLevel.Debug);
         }
 
         private class HandyNetReader
@@ -519,7 +519,7 @@ namespace GridProxy
 
             if (!match.Success)
             {
-                OpenMetaverse.Logger.Log("[" + reqNo + "] Bad request!", Helpers.LogLevel.Warning);
+                LibreMetaverse.Logger.Log("[" + reqNo + "] Bad request!", Helpers.LogLevel.Warning);
                 byte[] wr = Encoding.ASCII.GetBytes("HTTP/1.0 400 Bad Request\r\nContent-Length: 0\r\n\r\n");
                 netStream.Write(wr, 0, wr.Length);
                 netStream.Close(); client.Close();
@@ -529,7 +529,7 @@ namespace GridProxy
             meth = match.Groups[1].Captures[0].ToString();
             uri = match.Groups[2].Captures[0].ToString();
 
-            OpenMetaverse.Logger.Log(String.Format("[{0}] {1}:{2}", reqNo, meth, uri), Helpers.LogLevel.Debug);
+            LibreMetaverse.Logger.Log(String.Format("[{0}] {1}:{2}", reqNo, meth, uri), Helpers.LogLevel.Debug);
 
             // read HTTP header
             do
@@ -547,7 +547,7 @@ namespace GridProxy
 
                 if (!match.Success)
                 {
-                    OpenMetaverse.Logger.Log(String.Format("[{0}] Bad Header: '{1}'", reqNo, line), Helpers.LogLevel.Warning);
+                    LibreMetaverse.Logger.Log(String.Format("[{0}] Bad Header: '{1}'", reqNo, line), Helpers.LogLevel.Warning);
                     byte[] wr = Encoding.ASCII.GetBytes("HTTP/1.0 400 Bad Request\r\nContent-Length: 0\r\n\r\n");
                     netStream.Write(wr, 0, wr.Length);
                     netStream.Close(); client.Close();
@@ -574,7 +574,7 @@ namespace GridProxy
             reader.Read(content, 0, contentLength);
 
             if (contentLength < 8192)
-                OpenMetaverse.Logger.Log(String.Format("[{0}] request length={1}:\n{2}", reqNo, contentLength, Utils.BytesToString(content)), Helpers.LogLevel.Debug);
+                LibreMetaverse.Logger.Log(String.Format("[{0}] request length={1}:\n{2}", reqNo, contentLength, Utils.BytesToString(content)), Helpers.LogLevel.Debug);
 
             if (uri == "/")
             {
@@ -600,7 +600,7 @@ namespace GridProxy
             }
             else
             {
-                OpenMetaverse.Logger.Log("404 not found: " + uri, Helpers.LogLevel.Error);
+                LibreMetaverse.Logger.Log("404 not found: " + uri, Helpers.LogLevel.Error);
                 byte[] wr = Encoding.ASCII.GetBytes("HTTP/1.0 404 Not Found\r\nContent-Length: 0\r\n\r\n");
                 netStream.Write(wr, 0, wr.Length);
                 netStream.Close(); client.Close();
@@ -620,7 +620,7 @@ namespace GridProxy
             Match match = new Regex(@"^(https?)://([^:/]+)(:\d+)?(/.*)$").Match(uri);
             if (!match.Success)
             {
-                OpenMetaverse.Logger.Log("[" + reqNo + "] Malformed proxy URI: " + uri, Helpers.LogLevel.Error);
+                LibreMetaverse.Logger.Log("[" + reqNo + "] Malformed proxy URI: " + uri, Helpers.LogLevel.Error);
                 byte[] wr = Encoding.ASCII.GetBytes("HTTP/1.0 404 Not Found\r\nContent-Length: 0\r\n\r\n");
                 netStream.Write(wr, 0, wr.Length);
                 return;
@@ -748,7 +748,7 @@ namespace GridProxy
                     }
                     else if (cap == null)
                     {
-                        OpenMetaverse.Logger.Log(string.Format("{0} {1}", req.Method, req.Address.ToString()), Helpers.LogLevel.Info);
+                        LibreMetaverse.Logger.Log(string.Format("{0} {1}", req.Method, req.Address.ToString()), Helpers.LogLevel.Info);
                     }
                     resp = (HttpWebResponse)req.GetResponse();
                 }
@@ -757,7 +757,7 @@ namespace GridProxy
                 {
                     if (e.Status == WebExceptionStatus.Timeout || e.Status == WebExceptionStatus.SendFailure)
                     {
-                        OpenMetaverse.Logger.Log("Request timeout", Helpers.LogLevel.Warning, e);
+                        LibreMetaverse.Logger.Log("Request timeout", Helpers.LogLevel.Warning, e);
                         byte[] wr = Encoding.ASCII.GetBytes("HTTP/1.0 504 Proxy Request Timeout\r\nContent-Length: 0\r\n\r\n");
                         netStream.Write(wr, 0, wr.Length);
                         return;
@@ -768,7 +768,7 @@ namespace GridProxy
                     }
                     else
                     {
-                        OpenMetaverse.Logger.Log("Request error", Helpers.LogLevel.Error, e);
+                        LibreMetaverse.Logger.Log("Request error", Helpers.LogLevel.Error, e);
                         byte[] wr = Encoding.ASCII.GetBytes("HTTP/1.0 502 Gateway Error\r\nContent-Length: 0\r\n\r\n"); // FIXME
                         netStream.Write(wr, 0, wr.Length);
                         return;
@@ -834,7 +834,7 @@ namespace GridProxy
                 catch (Exception ex)
                 {
                     // TODO: Should we handle this somehow?
-                    OpenMetaverse.Logger.DebugLog("Failed writing output: " + ex.Message);
+                    LibreMetaverse.Logger.DebugLog("Failed writing output: " + ex.Message);
                 }
             }
 
@@ -848,12 +848,12 @@ namespace GridProxy
                     }
                     catch (InvalidCastException ex)
                     {
-                        OpenMetaverse.Logger.Log("Invalid Cast thrown trying to cast OSD to OSDMap: \n'" + capReq.Response.AsString() + "' Length=" + capReq.RawResponse.Length.ToString() + "\n",
+                        LibreMetaverse.Logger.Log("Invalid Cast thrown trying to cast OSD to OSDMap: \n'" + capReq.Response.AsString() + "' Length=" + capReq.RawResponse.Length.ToString() + "\n",
                             Helpers.LogLevel.Error, ex);
                     }
                     catch (Exception ex)
                     {
-                        OpenMetaverse.Logger.Log("Error firing delegate", Helpers.LogLevel.Error, ex);
+                        LibreMetaverse.Logger.Log("Error firing delegate", Helpers.LogLevel.Error, ex);
                     }
                 }
 
@@ -879,8 +879,8 @@ namespace GridProxy
             }
 
             consoleMsg += "\n" + respString + "\n--------";
-            OpenMetaverse.Logger.Log(consoleMsg, Helpers.LogLevel.Debug);
-            OpenMetaverse.Logger.Log("[" + reqNo + "] Fixed-up response:\n" + respString + "\n--------", Helpers.LogLevel.Debug);
+            LibreMetaverse.Logger.Log(consoleMsg, Helpers.LogLevel.Debug);
+            LibreMetaverse.Logger.Log("[" + reqNo + "] Fixed-up response:\n" + respString + "\n--------", Helpers.LogLevel.Debug);
 
             try
             {
@@ -893,7 +893,7 @@ namespace GridProxy
             catch (IOException) { }
             catch (Exception e)
             {
-                OpenMetaverse.Logger.Log("Exception: Error writing to stream " + e, Helpers.LogLevel.Error, e);
+                LibreMetaverse.Logger.Log("Exception: Error writing to stream " + e, Helpers.LogLevel.Error, e);
             }
 
             return;
@@ -1088,14 +1088,14 @@ namespace GridProxy
 
                     string capsURL = body["seed-capability"].AsString();
 
-                    OpenMetaverse.Logger.Log("DEBUG: Got EstablishAgentCommunication for " + ipAndPort + " with seed cap " + capsURL, Helpers.LogLevel.Debug);
+                    LibreMetaverse.Logger.Log("DEBUG: Got EstablishAgentCommunication for " + ipAndPort + " with seed cap " + capsURL, Helpers.LogLevel.Debug);
 
                     GenericCheck(ref simIP, ref simPort, ref capsURL, false);
                     body["seed-capability"] = OSD.FromString(capsURL);
                     string ipport = $"{new IPAddress(simIP)}:{simPort}";
                     body["sim-ip-and-port"] = OSD.FromString(ipport);
 
-                    OpenMetaverse.Logger.Log("DEBUG: Modified EstablishAgentCommunication to " + body["sim-ip-and-port"].AsString() + " with seed cap " + capsURL, Helpers.LogLevel.Debug);
+                    LibreMetaverse.Logger.Log("DEBUG: Modified EstablishAgentCommunication to " + body["sim-ip-and-port"].AsString() + " with seed cap " + capsURL, Helpers.LogLevel.Debug);
                 }
             }
             return false;
@@ -1119,7 +1119,7 @@ namespace GridProxy
                     {
                         try { d(this, new XmlRpcRequestEventArgs(request)); }
                         //try { d(request); }
-                        catch (Exception e) { OpenMetaverse.Logger.Log("Exception in login request delegate" + e, Helpers.LogLevel.Error, e); }
+                        catch (Exception e) { LibreMetaverse.Logger.Log("Exception in login request delegate" + e, Helpers.LogLevel.Error, e); }
                     }
                 }
                 XmlRpcResponse response;
@@ -1133,7 +1133,7 @@ namespace GridProxy
                 }
                 catch (Exception e)
                 {
-                    OpenMetaverse.Logger.Log("Error during login response", Helpers.LogLevel.Error, e);
+                    LibreMetaverse.Logger.Log("Error during login response", Helpers.LogLevel.Error, e);
                     return;
                 }
 
@@ -1144,7 +1144,7 @@ namespace GridProxy
                 }
                 catch (Exception e)
                 {
-                    OpenMetaverse.Logger.Log(e.Message, Helpers.LogLevel.Error);
+                    LibreMetaverse.Logger.Log(e.Message, Helpers.LogLevel.Error);
                     return;
                 }
 
@@ -1188,7 +1188,7 @@ namespace GridProxy
                     foreach (XmlRpcResponseDelegate d in loginResponseDelegates)
                     {
                         try { d(response); }
-                        catch (Exception e) { OpenMetaverse.Logger.Log("Exception in login response delegate" + e, Helpers.LogLevel.Error, e); }
+                        catch (Exception e) { LibreMetaverse.Logger.Log("Exception in login response delegate" + e, Helpers.LogLevel.Error, e); }
                     }
                 }
 
@@ -1240,7 +1240,7 @@ namespace GridProxy
                 {
                     if (map != null)
                     {
-                        OpenMetaverse.Logger.Log("Connection to server failed, returned LLSD error follows:\n" + map.ToString(), Helpers.LogLevel.Error);
+                        LibreMetaverse.Logger.Log("Connection to server failed, returned LLSD error follows:\n" + map.ToString(), Helpers.LogLevel.Error);
                     }
                     byte[] wr = Encoding.ASCII.GetBytes("HTTP/1.0 500 Internal Server Error\r\nContent-Length: 0\r\n\r\n");
                     netStream.Write(wr, 0, wr.Length);
@@ -1414,7 +1414,7 @@ namespace GridProxy
                             }
                             catch (Exception e)
                             {
-                                OpenMetaverse.Logger.Log("Exception in incoming delegate", Helpers.LogLevel.Error, e);
+                                LibreMetaverse.Logger.Log("Exception in incoming delegate", Helpers.LogLevel.Error, e);
                             }
 
                             if (packet != null)
@@ -1425,11 +1425,11 @@ namespace GridProxy
                     }
                     else
                         // ignore packets from unknown peers
-                        OpenMetaverse.Logger.Log("Dropping packet from unknown peer " + remoteEndPoint, Helpers.LogLevel.Warning);
+                        LibreMetaverse.Logger.Log("Dropping packet from unknown peer " + remoteEndPoint, Helpers.LogLevel.Warning);
                 }
                 catch (Exception e)
                 {
-                    OpenMetaverse.Logger.Log("Error processing incoming packet from simulator", Helpers.LogLevel.Error, e);
+                    LibreMetaverse.Logger.Log("Error processing incoming packet from simulator", Helpers.LogLevel.Error, e);
                 }
                 finally
                 {
@@ -1441,7 +1441,7 @@ namespace GridProxy
                     }
                     catch (Exception e)
                     {
-                        OpenMetaverse.Logger.Log("Listener Socket Exception", Helpers.LogLevel.Error, e);
+                        LibreMetaverse.Logger.Log("Listener Socket Exception", Helpers.LogLevel.Error, e);
                     }
                 }
         }
@@ -1516,7 +1516,7 @@ namespace GridProxy
                 // return a new proxy
                 SimProxy simProxy = new SimProxy(proxyConfig, simEndPoint, this);
                 IPEndPoint fakeSim = simProxy.LocalEndPoint();
-                OpenMetaverse.Logger.Log("Creating proxy for " + simEndPoint + " at " + fakeSim, Helpers.LogLevel.Info);
+                LibreMetaverse.Logger.Log("Creating proxy for " + simEndPoint + " at " + fakeSim, Helpers.LogLevel.Info);
                 simProxy.Run();
                 proxyEndPoints.Add(simEndPoint, fakeSim);
                 simProxies.Add(simEndPoint, simProxy);
@@ -1636,7 +1636,7 @@ namespace GridProxy
                 }
                 catch (Exception e)
                 {
-                    OpenMetaverse.Logger.Log("Exception running BackgroundTasks", Helpers.LogLevel.Error, e);
+                    LibreMetaverse.Logger.Log("Exception running BackgroundTasks", Helpers.LogLevel.Error, e);
                 }
             }
 
@@ -1679,7 +1679,7 @@ namespace GridProxy
                         {
                             // interpret the packet according to the SL protocol
                             int end = length - 1;
-                            Packet packet = OpenMetaverse.Packets.Packet.BuildPacket(receiveBuffer, ref end, zeroBuffer);
+                            Packet packet = LibreMetaverse.Packets.Packet.BuildPacket(receiveBuffer, ref end, zeroBuffer);
 
                             //OpenMetaverse.Logger.Log("-> " + packet.Type + " #" + packet.Header.Sequence, Helpers.LogLevel.Debug);
 
@@ -1747,7 +1747,7 @@ namespace GridProxy
                                 }
                                 catch (Exception e)
                                 {
-                                    OpenMetaverse.Logger.Log("exception in outgoing delegate", Helpers.LogLevel.Error, e);
+                                    LibreMetaverse.Logger.Log("exception in outgoing delegate", Helpers.LogLevel.Error, e);
                                 }
 
                                 if (packet != null)
@@ -1768,7 +1768,7 @@ namespace GridProxy
                     }
                     catch (Exception e)
                     {
-                        OpenMetaverse.Logger.Log("Proxy error sending packet", Helpers.LogLevel.Error, e);
+                        LibreMetaverse.Logger.Log("Proxy error sending packet", Helpers.LogLevel.Error, e);
                     }
                     finally
                     {
@@ -1780,7 +1780,7 @@ namespace GridProxy
                         }
                         catch (SocketException e)
                         {
-                            OpenMetaverse.Logger.Log("Socket Shutdown: " + e.SocketErrorCode, Helpers.LogLevel.Warning);
+                            LibreMetaverse.Logger.Log("Socket Shutdown: " + e.SocketErrorCode, Helpers.LogLevel.Warning);
                         }
                     }
                 }
@@ -2070,7 +2070,7 @@ namespace GridProxy
         // LogPacket: log a packet dump
         private Packet LogPacket(Packet packet, string type)
         {
-            OpenMetaverse.Logger.Log(type + " packet:\n" + packet, Helpers.LogLevel.Info);
+            LibreMetaverse.Logger.Log(type + " packet:\n" + packet, Helpers.LogLevel.Info);
             return packet;
         }
 

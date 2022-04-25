@@ -2,7 +2,7 @@
 using System.Text;
 using System.Collections.Generic;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class PlayAnimationCommand : Command
     {        

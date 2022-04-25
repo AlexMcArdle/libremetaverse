@@ -28,9 +28,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.StructuredData;
 
-namespace OpenMetaverse.Assets
+namespace LibreMetaverse.Assets
 {
     /// <summary>
     /// A linkset asset, containing a parent primitive and zero or more children

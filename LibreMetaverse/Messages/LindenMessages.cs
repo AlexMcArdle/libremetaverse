@@ -30,10 +30,10 @@ using System.Collections.Generic;
 using System.Net;
 using System.IO;
 using ComponentAce.Compression.Libs.zlib;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Interfaces;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Interfaces;
 
-namespace OpenMetaverse.Messages.Linden
+namespace LibreMetaverse.Messages.Linden
 {
     #region Teleport/Region/Movement Messages
 

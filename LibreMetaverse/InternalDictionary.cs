@@ -27,7 +27,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// The InternalDictionary class is used through the library for storing key/value pairs.

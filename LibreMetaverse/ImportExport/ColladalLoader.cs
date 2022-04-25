@@ -35,11 +35,11 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Xml.Serialization;
-using OpenMetaverse.ImportExport.Collada14;
-using OpenMetaverse.Rendering;
-using OpenMetaverse.Imaging;
+using LibreMetaverse.ImportExport.Collada14;
+using LibreMetaverse.Rendering;
+using LibreMetaverse.Imaging;
 
-namespace OpenMetaverse.ImportExport
+namespace LibreMetaverse.ImportExport
 {
     /// <summary>
     /// Parsing Collada model files into data structures

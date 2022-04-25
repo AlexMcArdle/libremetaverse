@@ -28,7 +28,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Globalization;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     [Serializable]
     [StructLayout(LayoutKind.Sequential)]

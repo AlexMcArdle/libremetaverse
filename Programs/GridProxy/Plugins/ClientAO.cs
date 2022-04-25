@@ -31,8 +31,8 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
-using OpenMetaverse;
-using OpenMetaverse.Packets;
+using LibreMetaverse;
+using LibreMetaverse.Packets;
 using GridProxy;
 
 

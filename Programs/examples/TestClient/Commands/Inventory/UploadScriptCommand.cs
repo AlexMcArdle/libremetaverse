@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     /// <summary>
     /// Example of how to put a new script in your inventory

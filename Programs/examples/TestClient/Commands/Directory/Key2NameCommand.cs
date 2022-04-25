@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace OpenMetaverse.TestClient.Commands
+namespace LibreMetaverse.TestClient.Commands
 {
     class key2nameCommand : Command
     {

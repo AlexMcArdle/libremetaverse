@@ -27,7 +27,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// A 128-bit Universally Unique Identifier, used throughout the Second

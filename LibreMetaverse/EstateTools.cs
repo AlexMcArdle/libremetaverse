@@ -24,12 +24,12 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 using System;
-using OpenMetaverse.Packets;
-using OpenMetaverse.Interfaces;
-using OpenMetaverse.Messages.Linden;
+using LibreMetaverse.Packets;
+using LibreMetaverse.Interfaces;
+using LibreMetaverse.Messages.Linden;
 using System.Collections.Generic;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>Describes tasks returned in LandStatReply</summary>
     public class EstateTask

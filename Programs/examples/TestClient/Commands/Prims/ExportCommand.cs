@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Assets;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Assets;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class ExportCommand : Command
     {

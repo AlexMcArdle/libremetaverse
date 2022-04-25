@@ -32,7 +32,7 @@ using log4net.Config;
 
 [assembly: XmlConfigurator(Watch = true)]
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// Singleton logging class for the entire library

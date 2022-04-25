@@ -25,9 +25,9 @@
  */
 
 using System;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.StructuredData;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     public partial class Primitive : IEquatable<Primitive>
     {

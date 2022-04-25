@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class XferCommand : Command
     {

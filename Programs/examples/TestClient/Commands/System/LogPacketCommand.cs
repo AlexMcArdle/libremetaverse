@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using OpenMetaverse.Packets;
+using LibreMetaverse.Packets;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class PacketLogCommand : Command
     {

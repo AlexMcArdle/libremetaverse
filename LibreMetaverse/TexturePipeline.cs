@@ -30,10 +30,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using OpenMetaverse.Packets;
-using OpenMetaverse.Assets;
+using LibreMetaverse.Packets;
+using LibreMetaverse.Assets;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// The current status of a texture request as it moves through the pipeline or final result of a texture request. 

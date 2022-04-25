@@ -31,11 +31,11 @@ using System.Net.Sockets;
 using System.Text;
 using System.IO;
 using System.Xml;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse;
-using OpenMetaverse.Http;
-using OpenMetaverse.Interfaces;
-using OpenMetaverse.Messages.Linden;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse;
+using LibreMetaverse.Http;
+using LibreMetaverse.Interfaces;
+using LibreMetaverse.Messages.Linden;
 
 namespace LibreMetaverse.Voice
 {

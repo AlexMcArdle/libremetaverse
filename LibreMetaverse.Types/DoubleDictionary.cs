@@ -28,7 +28,7 @@ using System;
 using System.Threading;
 using System.Collections.Generic;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     public class DoubleDictionary<TKey1, TKey2, TValue>
     {

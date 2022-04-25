@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace OpenMetaverse.TestClient.Commands
+namespace LibreMetaverse.TestClient.Commands
 {
     class SearchClassifiedsCommand : Command
     {

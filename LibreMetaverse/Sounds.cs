@@ -27,7 +27,7 @@
 using System.Reflection;
 using System.Collections.Generic;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// pre-defined built in sounds

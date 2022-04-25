@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Text;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     /// <summary>
     /// dumps group roles to console

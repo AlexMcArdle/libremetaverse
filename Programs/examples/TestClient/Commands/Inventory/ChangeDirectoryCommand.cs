@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 
-namespace OpenMetaverse.TestClient.Commands.Inventory.Shell
+namespace LibreMetaverse.TestClient.Commands.Inventory.Shell
 {
     public class ChangeDirectoryCommand : Command
     {
-        private OpenMetaverse.Inventory Inventory;
+        private LibreMetaverse.Inventory Inventory;
 
         public ChangeDirectoryCommand(TestClient client)
         {

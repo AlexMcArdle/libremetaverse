@@ -29,12 +29,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using OpenMetaverse.Packets;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Interfaces;
-using OpenMetaverse.Http;
+using LibreMetaverse.Packets;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Interfaces;
+using LibreMetaverse.Http;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// Capabilities is the name of the bi-directional HTTP REST protocol
@@ -321,7 +321,7 @@ namespace OpenMetaverse
                 #region Stats Tracking
                 if (Simulator.Client.Settings.TRACK_UTILIZATION)
                 {
-                    Simulator.Client.Stats.Update(eventName, OpenMetaverse.Stats.Type.Message, 0, body.ToString().Length);
+                    Simulator.Client.Stats.Update(eventName, LibreMetaverse.Stats.Type.Message, 0, body.ToString().Length);
                 }
                 #endregion
             }

@@ -27,9 +27,9 @@
 
 using System;
 using System.Runtime.Serialization;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.StructuredData;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// Base Class for Inventory Items
@@ -37,19 +37,19 @@ namespace OpenMetaverse
     [Serializable]
     public abstract class InventoryBase : ISerializable
     {
-        /// <summary><seealso cref="OpenMetaverse.UUID"/> of item/folder</summary>
+        /// <summary><seealso cref="LibreMetaverse.UUID"/> of item/folder</summary>
         public UUID UUID;
-        /// <summary><seealso cref="OpenMetaverse.UUID"/> of parent folder</summary>
+        /// <summary><seealso cref="LibreMetaverse.UUID"/> of parent folder</summary>
         public UUID ParentUUID;
         /// <summary>Name of item/folder</summary>
         public string Name;
-        /// <summary>Item/Folder Owners <seealso cref="OpenMetaverse.UUID"/></summary>
+        /// <summary>Item/Folder Owners <seealso cref="LibreMetaverse.UUID"/></summary>
         public UUID OwnerID;
 
         /// <summary>
         /// Constructor, takes an itemID as a parameter
         /// </summary>
-        /// <param name="itemID">The <seealso cref="OpenMetaverse.UUID"/> of the item</param>
+        /// <param name="itemID">The <seealso cref="LibreMetaverse.UUID"/> of the item</param>
         protected InventoryBase(UUID itemID)
         {
             if (itemID == UUID.Zero)
@@ -135,11 +135,11 @@ namespace OpenMetaverse
         }
         /// <summary>The <seealso cref="UUID"/> of this item</summary>
         public UUID AssetUUID;
-        /// <summary>The combined <seealso cref="OpenMetaverse.Permissions"/> of this item</summary>
+        /// <summary>The combined <seealso cref="LibreMetaverse.Permissions"/> of this item</summary>
         public Permissions Permissions;
-        /// <summary>The type of item from <seealso cref="OpenMetaverse.AssetType"/></summary>
+        /// <summary>The type of item from <seealso cref="LibreMetaverse.AssetType"/></summary>
         public AssetType AssetType;
-        /// <summary>The type of item from the <seealso cref="OpenMetaverse.InventoryType"/> enum</summary>
+        /// <summary>The type of item from the <seealso cref="LibreMetaverse.InventoryType"/> enum</summary>
         public InventoryType InventoryType;
         /// <summary>The <seealso cref="UUID"/> of the creator of this item</summary>
         public UUID CreatorID;
@@ -151,7 +151,7 @@ namespace OpenMetaverse
         public bool GroupOwned;
         /// <summary>The price this item can be purchased for</summary>
         public int SalePrice;
-        /// <summary>The type of sale from the <seealso cref="OpenMetaverse.SaleType"/> enum</summary>
+        /// <summary>The type of sale from the <seealso cref="LibreMetaverse.SaleType"/> enum</summary>
         public SaleType SaleType;
         /// <summary>Combined flags from <seealso cref="InventoryItemFlags"/></summary>
         public uint Flags;
@@ -714,7 +714,7 @@ namespace OpenMetaverse
         }
 
         /// <summary>
-        /// The <seealso cref="OpenMetaverse.WearableType"/>, Skin, Shape, Skirt, Etc
+        /// The <seealso cref="LibreMetaverse.WearableType"/>, Skin, Shape, Skirt, Etc
         /// </summary>
         public WearableType WearableType
         {

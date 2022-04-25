@@ -31,7 +31,7 @@ using System.IO;
 using System.Xml;
 using System.Text;
 
-namespace OpenMetaverse.StructuredData
+namespace LibreMetaverse.StructuredData
 {
     /// <summary>
     /// 

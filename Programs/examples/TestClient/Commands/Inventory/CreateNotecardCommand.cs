@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading;
-using OpenMetaverse.Assets;
+using LibreMetaverse.Assets;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class CreateNotecardCommand : Command
     {

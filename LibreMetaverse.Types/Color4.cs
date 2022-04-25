@@ -27,7 +27,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// An 8-bit color structure including an alpha channel

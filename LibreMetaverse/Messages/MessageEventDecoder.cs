@@ -25,11 +25,11 @@
  */
 
 using System;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Interfaces;
-using OpenMetaverse.Messages.Linden;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Interfaces;
+using LibreMetaverse.Messages.Linden;
 
-namespace OpenMetaverse.Messages
+namespace LibreMetaverse.Messages
 {
 
     public static partial class MessageUtils

@@ -28,7 +28,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OpenMetaverse.Assets
+namespace LibreMetaverse.Assets
 {
     #region Enums
     /// <summary>

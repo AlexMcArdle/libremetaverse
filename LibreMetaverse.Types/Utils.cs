@@ -28,7 +28,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     public static partial class Utils
     {

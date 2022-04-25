@@ -29,7 +29,7 @@ using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace OpenMetaverse.Rendering
+namespace LibreMetaverse.Rendering
 {
     /// <summary>
     /// load the 'avatar_skeleton.xml'

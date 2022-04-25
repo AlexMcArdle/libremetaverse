@@ -26,9 +26,9 @@
 
 using System;
 using System.Threading;
-using OpenMetaverse.Packets;
+using LibreMetaverse.Packets;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     public partial class AgentManager
     {
@@ -728,7 +728,7 @@ namespace OpenMetaverse
             /// <param name="angle">Angle in radians</param>
             public void SetFOVVerticalAngle(float angle)
             {
-                OpenMetaverse.Packets.AgentFOVPacket msg = new OpenMetaverse.Packets.AgentFOVPacket();
+                LibreMetaverse.Packets.AgentFOVPacket msg = new LibreMetaverse.Packets.AgentFOVPacket();
                 msg.AgentData.AgentID = Client.Self.AgentID;
                 msg.AgentData.SessionID = Client.Self.SessionID;
                 msg.AgentData.CircuitCode = Client.Network.CircuitCode;

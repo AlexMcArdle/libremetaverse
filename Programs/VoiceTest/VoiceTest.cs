@@ -27,7 +27,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using OpenMetaverse;
+using LibreMetaverse;
 using LibreMetaverse.Voice;
 
 namespace VoiceTest

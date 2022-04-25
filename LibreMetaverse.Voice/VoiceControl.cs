@@ -31,9 +31,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
-using OpenMetaverse;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Http;
+using LibreMetaverse;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Http;
 
 namespace LibreMetaverse.Voice
 {

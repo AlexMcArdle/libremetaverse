@@ -42,8 +42,8 @@ using System.IO;
 using System.Text;
 using System.Xml;
 using NUnit.Framework;
-using OpenMetaverse;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse;
+using LibreMetaverse.StructuredData;
 
 namespace LibreMetaverse.Tests
 {
@@ -679,7 +679,7 @@ namespace LibreMetaverse.Tests
         {
             // each 80 chars
             string sOne = "asdklfjasadlfkjaerotiudfgjkhsdklgjhsdklfghasdfklhjasdfkjhasdfkljahsdfjklaasdfkj8";
-            string sTwo = "asdfkjlaaweoiugsdfjkhsdfg,.mnasdgfkljhrtuiohfglökajsdfoiwghjkdlaaaaseldkfjgheus9";
+            string sTwo = "asdfkjlaaweoiugsdfjkhsdfg,.mnasdgfkljhrtuiohfglé°‡ajsdfoiwghjkdlaaaaseldkfjgheus9";
             
             OSD stringOne = OSD.FromString( sOne );
             OSD stringTwo = OSD.FromString(sTwo);

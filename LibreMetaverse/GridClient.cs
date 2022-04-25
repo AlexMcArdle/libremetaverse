@@ -28,7 +28,7 @@ using System.Net;
 using System.Net.Http;
 using LibreMetaverse;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// Main class to expose grid functionality to clients. All of the

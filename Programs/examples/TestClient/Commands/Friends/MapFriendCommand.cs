@@ -2,7 +2,7 @@ using System;
 using System.Threading;
 using System.Text;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class MapFriendCommand : Command
     {

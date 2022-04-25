@@ -4,9 +4,9 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using System.ComponentModel;
-using OpenMetaverse.Assets;
+using LibreMetaverse.Assets;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class QueuedDownloadInfo
     {
@@ -277,7 +277,7 @@ namespace OpenMetaverse.TestClient
             {
                 if (BackupWorker.CancellationPending)
                     return;
-                else if (i.Data is OpenMetaverse.InventoryFolder)
+                else if (i.Data is LibreMetaverse.InventoryFolder)
                     BackupFolder(i, sPathSoFar + @"\" + MakeValid(i.Data.Name.Trim()));
             }
         }

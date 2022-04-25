@@ -36,8 +36,8 @@ using System.IO;
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Reflection;
-using OpenMetaverse;
-using OpenMetaverse.Packets;
+using LibreMetaverse;
+using LibreMetaverse.Packets;
 using GridProxy;
 
 

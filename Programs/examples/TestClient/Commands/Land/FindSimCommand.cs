@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class FindSimCommand : Command
     {

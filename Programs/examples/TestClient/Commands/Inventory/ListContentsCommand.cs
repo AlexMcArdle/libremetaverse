@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 
-namespace OpenMetaverse.TestClient.Commands.Inventory.Shell
+namespace LibreMetaverse.TestClient.Commands.Inventory.Shell
 {
     public class ListContentsCommand : Command
     {
         private InventoryManager Manager;
-        private OpenMetaverse.Inventory Inventory;
+        private LibreMetaverse.Inventory Inventory;
         public ListContentsCommand(TestClient client)
         {
             Name = "ls";

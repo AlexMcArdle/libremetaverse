@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Threading;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     /// <summary>
     /// Request the raw terrain file from the simulator, save it as a file.

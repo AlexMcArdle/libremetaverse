@@ -28,9 +28,9 @@ using System;
 using System.Collections;
 using System.Net;
 using System.Threading;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.StructuredData;
 
-namespace OpenMetaverse.Http
+namespace LibreMetaverse.Http
 {
     public class EventQueueClient
     {

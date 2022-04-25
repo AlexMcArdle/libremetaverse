@@ -28,7 +28,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
 
     /// <summary>

@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Reflection;
-using OpenMetaverse.Packets;
+using LibreMetaverse.Packets;
 using LibreMetaverse.Voice;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class TestClient : GridClient
     {

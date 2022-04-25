@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using System.Threading;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class ParcelSelectObjectsCommand : Command
     {

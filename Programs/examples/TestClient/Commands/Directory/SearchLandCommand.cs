@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace OpenMetaverse.TestClient.Commands
+namespace LibreMetaverse.TestClient.Commands
 {
     /// <summary>
     /// 

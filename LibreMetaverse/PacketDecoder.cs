@@ -29,7 +29,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace OpenMetaverse.Packets
+namespace LibreMetaverse.Packets
 {
     public static class PacketDecoder
     {

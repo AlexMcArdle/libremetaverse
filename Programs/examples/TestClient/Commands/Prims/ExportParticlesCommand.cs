@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class ExportParticlesCommand : Command
     {

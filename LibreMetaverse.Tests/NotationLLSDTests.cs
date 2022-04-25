@@ -42,8 +42,8 @@ using System.IO;
 using System.Text;
 using System.Xml;
 using NUnit.Framework;
-using OpenMetaverse;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse;
+using LibreMetaverse.StructuredData;
 
 namespace LibreMetaverse.Tests
 {
@@ -367,7 +367,7 @@ namespace LibreMetaverse.Tests
 
             DoSomeStringSerializingActionsAndAsserts("\"\"");
 
-            DoSomeStringSerializingActionsAndAsserts("ÄÖÜäöü-these-should-be-some-german-umlauts");
+            DoSomeStringSerializingActionsAndAsserts("é—¹èŒ•é³‡-these-should-be-some-german-umlauts");
 
             DoSomeStringSerializingActionsAndAsserts("\t\n\r");
 

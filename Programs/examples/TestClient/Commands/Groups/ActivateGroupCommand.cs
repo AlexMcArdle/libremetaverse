@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
 using System.Threading;
-using OpenMetaverse.Packets;
+using LibreMetaverse.Packets;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     /// <summary>
     /// Changes Avatars currently active group

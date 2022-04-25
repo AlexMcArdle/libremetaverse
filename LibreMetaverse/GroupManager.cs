@@ -27,13 +27,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using OpenMetaverse.Packets;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Messages.Linden;
-using OpenMetaverse.Interfaces;
-using OpenMetaverse.Http;
+using LibreMetaverse.Packets;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Messages.Linden;
+using LibreMetaverse.Interfaces;
+using LibreMetaverse.Http;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     #region Structs
 
@@ -251,13 +251,13 @@ namespace OpenMetaverse
             if (OwnerID == UUID.Zero || AttachmentID == UUID.Zero)
                 return Utils.EmptyBytes;
 
-            OpenMetaverse.StructuredData.OSDMap att = new OpenMetaverse.StructuredData.OSDMap
+            LibreMetaverse.StructuredData.OSDMap att = new LibreMetaverse.StructuredData.OSDMap
             {
-                {"item_id", OpenMetaverse.StructuredData.OSD.FromUUID(AttachmentID)},
-                {"owner_id", OpenMetaverse.StructuredData.OSD.FromUUID(OwnerID)}
+                {"item_id", LibreMetaverse.StructuredData.OSD.FromUUID(AttachmentID)},
+                {"owner_id", LibreMetaverse.StructuredData.OSD.FromUUID(OwnerID)}
             };
 
-            return OpenMetaverse.StructuredData.OSDParser.SerializeLLSDXmlBytes(att);
+            return LibreMetaverse.StructuredData.OSDParser.SerializeLLSDXmlBytes(att);
 
             /*
             //I guess this is how this works, no gaurentees
@@ -1325,7 +1325,7 @@ namespace OpenMetaverse
         /// <param name="group">Group struct containing the new group info</param>
         public void RequestCreateGroup(Group group)
         {
-            OpenMetaverse.Packets.CreateGroupRequestPacket cgrp = new CreateGroupRequestPacket
+            LibreMetaverse.Packets.CreateGroupRequestPacket cgrp = new CreateGroupRequestPacket
             {
                 AgentData = new CreateGroupRequestPacket.AgentDataBlock
                 {
@@ -1353,7 +1353,7 @@ namespace OpenMetaverse
         /// <param name="group">Group struct to update.</param>
         public void UpdateGroup(UUID id, Group group)
         {
-            OpenMetaverse.Packets.UpdateGroupInfoPacket cgrp = new UpdateGroupInfoPacket
+            LibreMetaverse.Packets.UpdateGroupInfoPacket cgrp = new UpdateGroupInfoPacket
             {
                 AgentData = new UpdateGroupInfoPacket.AgentDataBlock
                 {
@@ -1381,7 +1381,7 @@ namespace OpenMetaverse
         /// <param name="member">Avatar's key to eject</param>
         public void EjectUser(UUID group, UUID member)
         {
-            OpenMetaverse.Packets.EjectGroupMemberRequestPacket eject = new EjectGroupMemberRequestPacket
+            LibreMetaverse.Packets.EjectGroupMemberRequestPacket eject = new EjectGroupMemberRequestPacket
             {
                 AgentData = new EjectGroupMemberRequestPacket.AgentDataBlock
                 {
@@ -1400,7 +1400,7 @@ namespace OpenMetaverse
         /// <param name="role">Modified role to be updated</param>
         public void UpdateRole(GroupRole role)
         {
-            OpenMetaverse.Packets.GroupRoleUpdatePacket gru =
+            LibreMetaverse.Packets.GroupRoleUpdatePacket gru =
                 new GroupRoleUpdatePacket
                 {
                     AgentData =
@@ -1428,7 +1428,7 @@ namespace OpenMetaverse
         /// <param name="role">Role to create</param>
         public void CreateRole(UUID group, GroupRole role)
         {
-            OpenMetaverse.Packets.GroupRoleUpdatePacket gru =
+            LibreMetaverse.Packets.GroupRoleUpdatePacket gru =
                 new GroupRoleUpdatePacket
                 {
                     AgentData =
@@ -1456,7 +1456,7 @@ namespace OpenMetaverse
         /// <param name="roleID">Role to delete</param>
         public void DeleteRole(UUID group, UUID roleID)
         {
-            OpenMetaverse.Packets.GroupRoleUpdatePacket gru =
+            LibreMetaverse.Packets.GroupRoleUpdatePacket gru =
                 new GroupRoleUpdatePacket
                 {
                     AgentData =
@@ -1485,7 +1485,7 @@ namespace OpenMetaverse
         /// <param name="member">Avatar's Key to remove</param>
         public void RemoveFromRole(UUID group, UUID role, UUID member)
         {
-            OpenMetaverse.Packets.GroupRoleChangesPacket grc =
+            LibreMetaverse.Packets.GroupRoleChangesPacket grc =
                 new GroupRoleChangesPacket
                 {
                     AgentData =
@@ -1512,7 +1512,7 @@ namespace OpenMetaverse
         /// <param name="member">Avatar's ID to assign to role</param>
         public void AddToRole(UUID group, UUID role, UUID member)
         {
-            OpenMetaverse.Packets.GroupRoleChangesPacket grc =
+            LibreMetaverse.Packets.GroupRoleChangesPacket grc =
                 new GroupRoleChangesPacket
                 {
                     AgentData =
@@ -1537,7 +1537,7 @@ namespace OpenMetaverse
         /// <param name="group">Group ID to fetch notices for</param>
         public void RequestGroupNoticesList(UUID group)
         {
-            OpenMetaverse.Packets.GroupNoticesListRequestPacket gnl =
+            LibreMetaverse.Packets.GroupNoticesListRequestPacket gnl =
                 new GroupNoticesListRequestPacket
                 {
                     AgentData =
@@ -1554,7 +1554,7 @@ namespace OpenMetaverse
         /// <param name="noticeID">ID of group notice</param>
         public void RequestGroupNotice(UUID noticeID)
         {
-            OpenMetaverse.Packets.GroupNoticeRequestPacket gnr =
+            LibreMetaverse.Packets.GroupNoticeRequestPacket gnr =
                 new GroupNoticeRequestPacket
                 {
                     AgentData =

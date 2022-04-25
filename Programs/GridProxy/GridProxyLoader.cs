@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Reflection;
-using OpenMetaverse;
-using OpenMetaverse.Packets;
+using LibreMetaverse;
+using LibreMetaverse.Packets;
 using XmlRpcCore;
-using Logger = OpenMetaverse.Logger;
+using Logger = LibreMetaverse.Logger;
 
 
 namespace GridProxy

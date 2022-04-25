@@ -26,10 +26,10 @@
 
 using System;
 using System.Collections.Generic;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Http;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Http;
 
-namespace OpenMetaverse.ImportExport
+namespace LibreMetaverse.ImportExport
 {
     /// <summary>
     /// Implements mesh upload communications with the simulator

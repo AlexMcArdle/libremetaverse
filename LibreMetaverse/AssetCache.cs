@@ -29,7 +29,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// Class that handles the local asset cache

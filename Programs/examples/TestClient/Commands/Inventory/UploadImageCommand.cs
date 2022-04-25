@@ -29,9 +29,9 @@ using System;
 using System.Threading;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using OpenMetaverse.Imaging;
+using LibreMetaverse.Imaging;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class UploadImageCommand : Command
     {

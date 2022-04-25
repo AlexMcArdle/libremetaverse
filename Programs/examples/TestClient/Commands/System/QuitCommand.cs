@@ -1,4 +1,4 @@
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class QuitCommand: Command
     {

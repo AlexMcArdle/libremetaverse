@@ -26,10 +26,10 @@
 
 using System;
 using System.Collections.Generic;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.StructuredData;
 using System.Reflection;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     #region Enums
 

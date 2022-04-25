@@ -29,12 +29,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading;
-using OpenMetaverse.Http;
-using OpenMetaverse.Messages.Linden;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Packets;
+using LibreMetaverse.Http;
+using LibreMetaverse.Messages.Linden;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Packets;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     #region Enums
 
@@ -496,7 +496,7 @@ namespace OpenMetaverse
         /// Fetch an inventory item from the dataserver
         /// </summary>
         /// <param name="itemID">The items <seealso cref="UUID"/></param>
-        /// <param name="ownerID">The item Owners <seealso cref="OpenMetaverse.UUID"/></param>
+        /// <param name="ownerID">The item Owners <seealso cref="LibreMetaverse.UUID"/></param>
         /// <param name="timeoutMS">a integer representing the number of milliseconds to wait for results</param>
         /// <returns>An <seealso cref="InventoryItem"/> object on success, or null if no item was found</returns>
         /// <remarks>Items will also be sent to the <seealso cref="InventoryManager.OnItemReceived"/> event</remarks>
@@ -527,8 +527,8 @@ namespace OpenMetaverse
         /// <summary>
         /// Request A single inventory item
         /// </summary>
-        /// <param name="itemID">The items <seealso cref="OpenMetaverse.UUID"/></param>
-        /// <param name="ownerID">The item Owners <seealso cref="OpenMetaverse.UUID"/></param>
+        /// <param name="itemID">The items <seealso cref="LibreMetaverse.UUID"/></param>
+        /// <param name="ownerID">The item Owners <seealso cref="LibreMetaverse.UUID"/></param>
         /// <seealso cref="InventoryManager.OnItemReceived"/>
         public void RequestFetchInventory(UUID itemID, UUID ownerID)
         {

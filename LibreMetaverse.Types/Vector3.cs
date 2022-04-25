@@ -28,7 +28,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Globalization;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// A three-dimensional vector with floating-point values

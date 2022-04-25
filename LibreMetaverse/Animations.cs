@@ -28,7 +28,7 @@ using System;
 using System.Reflection;
 using System.Collections.Generic;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     /// <summary>
     /// Static pre-defined animations available to all agents

@@ -26,9 +26,9 @@
  */
 
 using XmlRpcCore;
-using OpenMetaverse.Http;
-using OpenMetaverse.Packets;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.Http;
+using LibreMetaverse.Packets;
+using LibreMetaverse.StructuredData;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -40,7 +40,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     #region Enums
 

@@ -1,6 +1,6 @@
 using System;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class WhisperCommand : Command
     {

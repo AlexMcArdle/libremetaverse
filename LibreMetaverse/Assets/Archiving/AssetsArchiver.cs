@@ -29,7 +29,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 
-namespace OpenMetaverse.Assets
+namespace LibreMetaverse.Assets
 {
     /// <summary>
     /// Archives assets

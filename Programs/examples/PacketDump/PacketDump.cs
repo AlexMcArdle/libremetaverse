@@ -26,8 +26,8 @@
 
 using System;
 using System.Threading;
-using OpenMetaverse;
-using OpenMetaverse.Packets;
+using LibreMetaverse;
+using LibreMetaverse.Packets;
 
 namespace PacketDump
 {

@@ -30,9 +30,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Net;
-using OpenMetaverse.Packets;
+using LibreMetaverse.Packets;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     #region Enums
 
@@ -898,7 +898,7 @@ namespace OpenMetaverse
             #region Stats Tracking
             if (Client.Settings.TRACK_UTILIZATION)
             {
-                Client.Stats.Update(type.ToString(), OpenMetaverse.Stats.Type.Packet, dataLength, 0);
+                Client.Stats.Update(type.ToString(), LibreMetaverse.Stats.Type.Packet, dataLength, 0);
             }
             #endregion
         }
@@ -1182,7 +1182,7 @@ namespace OpenMetaverse
             #region Stats Tracking
             if (Client.Settings.TRACK_UTILIZATION)
             {
-                Client.Stats.Update(packet.Type.ToString(), OpenMetaverse.Stats.Type.Packet, 0, packet.Length);
+                Client.Stats.Update(packet.Type.ToString(), LibreMetaverse.Stats.Type.Packet, 0, packet.Length);
             }
             #endregion
         }

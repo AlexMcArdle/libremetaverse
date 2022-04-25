@@ -31,13 +31,13 @@ using System.Threading;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Collections.Extensions;
-using OpenMetaverse.Packets;
-using OpenMetaverse.Imaging;
-using OpenMetaverse.Assets;
-using OpenMetaverse.Http;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse.Packets;
+using LibreMetaverse.Imaging;
+using LibreMetaverse.Assets;
+using LibreMetaverse.Http;
+using LibreMetaverse.StructuredData;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     #region Enums
 
@@ -1108,8 +1108,8 @@ namespace OpenMetaverse
         /// <summary>
         /// Attach an item to our agent at a specific attach point
         /// </summary>
-        /// <param name="item">A <seealso cref="OpenMetaverse.InventoryItem"/> to attach</param>
-        /// <param name="attachPoint">the <seealso cref="OpenMetaverse.AttachmentPoint"/> on the avatar 
+        /// <param name="item">A <seealso cref="LibreMetaverse.InventoryItem"/> to attach</param>
+        /// <param name="attachPoint">the <seealso cref="LibreMetaverse.AttachmentPoint"/> on the avatar 
         /// to attach the item to</param>
         public void Attach(InventoryItem item, AttachmentPoint attachPoint)
         {
@@ -1119,8 +1119,8 @@ namespace OpenMetaverse
         /// <summary>
         /// Attach an item to our agent at a specific attach point
         /// </summary>
-        /// <param name="item">A <seealso cref="OpenMetaverse.InventoryItem"/> to attach</param>
-        /// <param name="attachPoint">the <seealso cref="OpenMetaverse.AttachmentPoint"/> on the avatar 
+        /// <param name="item">A <seealso cref="LibreMetaverse.InventoryItem"/> to attach</param>
+        /// <param name="attachPoint">the <seealso cref="LibreMetaverse.AttachmentPoint"/> on the avatar 
         /// <param name="replace">If true replace existing attachment on this attachment point, otherwise add to it (multi-attachments)</param>
         /// to attach the item to</param>
         public void Attach(InventoryItem item, AttachmentPoint attachPoint, bool replace)
@@ -1132,13 +1132,13 @@ namespace OpenMetaverse
         /// <summary>
         /// Attach an item to our agent specifying attachment details
         /// </summary>
-        /// <param name="itemID">The <seealso cref="OpenMetaverse.UUID"/> of the item to attach</param>
-        /// <param name="ownerID">The <seealso cref="OpenMetaverse.UUID"/> attachments owner</param>
+        /// <param name="itemID">The <seealso cref="LibreMetaverse.UUID"/> of the item to attach</param>
+        /// <param name="ownerID">The <seealso cref="LibreMetaverse.UUID"/> attachments owner</param>
         /// <param name="name">The name of the attachment</param>
         /// <param name="description">The description of the attahment</param>
-        /// <param name="perms">The <seealso cref="OpenMetaverse.Permissions"/> to apply when attached</param>
-        /// <param name="itemFlags">The <seealso cref="OpenMetaverse.InventoryItemFlags"/> of the attachment</param>
-        /// <param name="attachPoint">The <seealso cref="OpenMetaverse.AttachmentPoint"/> on the agent
+        /// <param name="perms">The <seealso cref="LibreMetaverse.Permissions"/> to apply when attached</param>
+        /// <param name="itemFlags">The <seealso cref="LibreMetaverse.InventoryItemFlags"/> of the attachment</param>
+        /// <param name="attachPoint">The <seealso cref="LibreMetaverse.AttachmentPoint"/> on the agent
         /// to attach the item to</param>
         public void Attach(UUID itemID, UUID ownerID, string name, string description,
             Permissions perms, uint itemFlags, AttachmentPoint attachPoint)
@@ -1149,13 +1149,13 @@ namespace OpenMetaverse
         /// <summary>
         /// Attach an item to our agent specifying attachment details
         /// </summary>
-        /// <param name="itemID">The <seealso cref="OpenMetaverse.UUID"/> of the item to attach</param>
-        /// <param name="ownerID">The <seealso cref="OpenMetaverse.UUID"/> attachments owner</param>
+        /// <param name="itemID">The <seealso cref="LibreMetaverse.UUID"/> of the item to attach</param>
+        /// <param name="ownerID">The <seealso cref="LibreMetaverse.UUID"/> attachments owner</param>
         /// <param name="name">The name of the attachment</param>
         /// <param name="description">The description of the attahment</param>
-        /// <param name="perms">The <seealso cref="OpenMetaverse.Permissions"/> to apply when attached</param>
-        /// <param name="itemFlags">The <seealso cref="OpenMetaverse.InventoryItemFlags"/> of the attachment</param>
-        /// <param name="attachPoint">The <seealso cref="OpenMetaverse.AttachmentPoint"/> on the agent
+        /// <param name="perms">The <seealso cref="LibreMetaverse.Permissions"/> to apply when attached</param>
+        /// <param name="itemFlags">The <seealso cref="LibreMetaverse.InventoryItemFlags"/> of the attachment</param>
+        /// <param name="attachPoint">The <seealso cref="LibreMetaverse.AttachmentPoint"/> on the agent
         /// <param name="replace">If true replace existing attachment on this attachment point, otherwise add to it (multi-attachments)</param>
         /// to attach the item to</param>
         public void Attach(UUID itemID, UUID ownerID, string name, string description,
@@ -1190,9 +1190,9 @@ namespace OpenMetaverse
         }
 
         /// <summary>
-        /// Detach an item from our agent using an <seealso cref="OpenMetaverse.InventoryItem"/> object
+        /// Detach an item from our agent using an <seealso cref="LibreMetaverse.InventoryItem"/> object
         /// </summary>
-        /// <param name="item">An <seealso cref="OpenMetaverse.InventoryItem"/> object</param>
+        /// <param name="item">An <seealso cref="LibreMetaverse.InventoryItem"/> object</param>
         public void Detach(InventoryItem item)
         {
             Detach(item.UUID);

@@ -28,7 +28,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     [Serializable]
     public class InventoryNode : ISerializable

@@ -28,10 +28,10 @@ using System;
 using System.Collections.Generic;
 
 using System.Text;
-using OpenMetaverse.StructuredData;
-using OpenMetaverse.Http;
+using LibreMetaverse.StructuredData;
+using LibreMetaverse.Http;
 
-namespace OpenMetaverse
+namespace LibreMetaverse
 {
     [Obsolete("Linden Lab has discontinued RegAPI access", true)]
     public class RegistrationApi

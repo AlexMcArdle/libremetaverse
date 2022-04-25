@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace OpenMetaverse.TestClient
+namespace LibreMetaverse.TestClient
 {
     public class LoadCommand: Command
     {

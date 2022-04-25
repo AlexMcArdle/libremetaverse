@@ -27,10 +27,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using OpenMetaverse;
-using OpenMetaverse.Http;
-using OpenMetaverse.Packets;
-using OpenMetaverse.StructuredData;
+using LibreMetaverse;
+using LibreMetaverse.Http;
+using LibreMetaverse.Packets;
+using LibreMetaverse.StructuredData;
 
 namespace LibreMetaverse
 {
