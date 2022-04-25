@@ -66,10 +66,12 @@ namespace LibreMetaverse.LslTools
           return Encoding.ASCII;
         }
         if ((object) str2 == (object) "UTF7")
-#pragma warning disable CS0618
-            return Encoding.UTF7;
-#pragma warning restore CS0618
-        if ((object) str2 == (object) "UTF8")
+#pragma warning disable CS061, SYSLIB0001
+//#pragma warning disable SYSLIB0001
+                    return Encoding.UTF7;
+#pragma warning restore CS061, SYSLIB0001
+                //#pragma warning restore CS0618
+                if ((object) str2 == (object) "UTF8")
           return Encoding.UTF8;
         if ((object) str2 == (object) "Unicode")
           return Encoding.Unicode;
